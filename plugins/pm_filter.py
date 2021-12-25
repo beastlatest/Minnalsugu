@@ -398,13 +398,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            InlineKeyboardButton('🕵️ Sєяαᴄн', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('♀️ Gяσυρ ♀️', url='https://t.me/Malluhubbmovies')
             ],[
-            InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria')
-            ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('🫂 Hєℓρ', callback_data='help'),
+            InlineKeyboardButton('🧠 Aвσυт', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -431,8 +429,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/TeamEvamaria'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('🔮 Cнαηηєℓ 🔮 ', url='https://t.me/MallusHubb'),
+            InlineKeyboardButton('🥶 source', callback_data='source')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
@@ -622,7 +620,7 @@ async def auto_filter(client, msg, spoll=False):
             cast = imdb["cast"],
             runtime = imdb["runtime"],
             countries = imdb["countries"],
-            certificates = imdb["certificates"],
+            certificates = imdb["certificates"], 
             languages = imdb["languages"],
             director = imdb["director"],
             writer = imdb["writer"],
