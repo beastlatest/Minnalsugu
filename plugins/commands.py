@@ -80,7 +80,7 @@ async def start(client, message):
             InlineKeyboardButton('♀️ Gяσυρ ♀️ ', url='https://t.me/Malluhubbmovies')
             ],[
             InlineKeyboardButton('🫂 Hєℓρ', callback_data='help'),
-            InlineKeyboardButton('🧠 Aвσυт'', callback_data='about')
+            InlineKeyboardButton('🧠 Aвσυт', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
